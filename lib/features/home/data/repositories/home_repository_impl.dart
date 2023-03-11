@@ -16,8 +16,8 @@ class HomeRepositoryImpl implements HomeRepository {
     try {
       final result = await homeDataSource.getUsers();
       return Right(result);
-    } on CreateUserException catch (e) {
-      return Left(CreateUserFailure(message: e.message));
+    } on GetUsersException catch (e) {
+      return Left(GetUsersFailure(message: e.message));
     }
   }
 }

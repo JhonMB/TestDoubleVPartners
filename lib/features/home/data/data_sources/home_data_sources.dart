@@ -14,8 +14,8 @@ class HomeDataSourceImpl implements HomeDataSource {
   Future<List<UserModel>> getUsers() async {
     try {
       return listUserModelUseCase.listUserModel;
-    } on CreateUserException catch (e) {
-      throw CreateUserException(message: e.message);
+    } on GetUsersException catch (e) {
+      throw GetUsersException(message: e.message);
     }
   }
 }

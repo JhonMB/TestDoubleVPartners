@@ -5,3 +5,9 @@ class CreateUserFailure extends Failure {
 
   CreateUserFailure({required this.message});
 }
+
+class GetUsersFailure extends Failure {
+  final String message;
+
+  GetUsersFailure({required this.message});
+}

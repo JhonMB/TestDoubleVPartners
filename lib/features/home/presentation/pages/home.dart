@@ -18,8 +18,14 @@ class Home extends StatusPage<HomeState, HomeCubit> {
       onWillPop: () async => false,
       child: Scaffold(
         appBar: topBar('Usuarios'),
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: 80,
+          ),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               ...List.generate(

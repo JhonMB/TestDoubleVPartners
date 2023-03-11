@@ -24,7 +24,7 @@ init() async {
   sl.registerFactory(() => CreateUserCubit(createUserUseCase: sl()));
 
   // ---------------------------------------------------------------------
-  //                               Use cases
+  //                               Use Cases
   // ---------------------------------------------------------------------
   sl.registerLazySingleton(() => GetUsersUseCase(homeRepository: sl()));
   sl.registerLazySingleton(() => CreateUserUseCase(createUserRepository: sl()));

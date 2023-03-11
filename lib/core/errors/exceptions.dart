@@ -3,3 +3,9 @@ class CreateUserException implements Exception {
 
   CreateUserException({required this.message});
 }
+
+class GetUsersException implements Exception {
+  final String message;
+
+  GetUsersException({required this.message});
+}
